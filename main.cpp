@@ -6,8 +6,6 @@
 #include <vector>
 
 using namespace std;
-
-// REQUERIMIENTO PROFE: Struct para espejar la tabla
 struct Alumno {
     int id;
     string nombre;
@@ -16,7 +14,6 @@ struct Alumno {
     double nota_final;
 };
 
-// Función auxiliar para imprimir los datos de forma ordenada
 void mostrarFicha(Alumno al) {
     cout << "ID: " << al.id << " | " << al.nombre << " " << al.apellido 
          << " | Nota: " << al.nota_final << " | Cel: " << al.celular << endl;
@@ -81,7 +78,6 @@ int main() {
 
         } else if (opcion == 3) {
             cout << "\n--- ALUMNOS EN RIESGO (NOTAS < 51) ---" << endl;
-            // AJUSTE: Ahora busca a los que tienen menos de 51
             mysql_query(conectar, "SELECT * FROM alumnos WHERE nota_final < 51");
             MYSQL_RES* res = mysql_store_result(conectar);
             MYSQL_ROW fila;
