@@ -7,7 +7,6 @@
 
 using namespace std;
 
-// REQUERIMIENTO PROFE: Struct para espejar la tabla
 struct Alumno {
     int id;
     string nombre;
@@ -16,7 +15,6 @@ struct Alumno {
     double nota_final;
 };
 
-// Función auxiliar para imprimir los datos de forma ordenada
 void mostrarFicha(Alumno al) {
     cout << "ID: " << al.id << " | " << al.nombre << " " << al.apellido 
          << " | Nota: " << al.nota_final << " | Cel: " << al.celular << endl;
